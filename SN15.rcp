@@ -1,0 +1,245 @@
+//
+// SN15.rcp : Resource file for the AR15 Serial # Application
+// 
+// This file contains all of the menus and text used in the program, this
+// provides an easy way to update the information.
+//
+// 04/21/2001	Need to add new information from Olympic Arms, released
+//		after their fire last June. 
+//
+#include "SN15Rsc.h"
+
+
+APPLICATION ID 1 "SN15"
+VERSION ID 1 "2.00"
+ICON "SN15.bmp"
+
+FORM ID MainForm at ( 2 2 156 156 )
+NOFRAME
+MENUID MainMenu
+BEGIN
+	TITLE "AR-15 S/N"
+
+        POPUPTRIGGER "Manufacturers" ID MainPopup AT (RIGHT@158 2 AUTO AUTO)
+	LIST "Federal Laws" "Advanced Armaments" "American Spirit Arms" "Armalite/Eagle" "Bohica" "Bushmaster" "Century Arms" "Colt" "Dalphon" "DPMS" "Eagle Arms" "Essential Arms" "Frankford Arsenal" "Hesse Arms" "J.L.M. & Sons" "Knights Armament Co." "Military Manufacturing" "Nesard" "Olympic Arms" "Professional Ordinance" "PWA" "Rocky Mountain Arms" "Sendra" ID MainList AT ( RIGHT@152 PREVBOTTOM+3 110 AUTO ) VISIBLEITEMS 10 NONUSABLE
+        POPUPLIST ID MainPopup MainList
+
+	SCROLLBAR ID scroll_info AT ( RIGHT@156 15 7 BOTTOM@142 ) USABLE VALUE 0 MIN 0 MAX 0 PAGESIZE 0
+
+	FIELD ID field_info AT ( 2 15 145 142 ) USABLE NONEDITABLE MULTIPLELINES DYNAMICSIZE MAXCHARS 4096 FONT 0 HASSCROLLBAR
+
+	FORMBITMAP AT ( 2 15 ) BITMAP AR15LOGO
+END
+
+BITMAP ID AR15LOGO "SN15-logo.bmp" COMPRESS
+
+MENU ID MainMenu
+BEGIN
+        PULLDOWN "AR-15"
+        BEGIN
+                MENUITEM "About..." ID mit_About "A"
+        END
+END
+
+FORM ID InfoForm at ( 2 2 156 156 )
+BEGIN
+        BUTTON "Done"  ID done_button AT ( 2 145 AUTO AUTO ) USABLE FRAME FONT 0
+
+END
+
+
+ALERT ID AboutAlert
+INFORMATION
+BEGIN
+        TITLE "About AR-15 Serial Numbers"
+        MESSAGE "AR-15 Serial Numbers\nv2.00\nCopyright (c) 2001\nby Brian C. Lane\nbcl@brianlane.com\nwww.brianlane.com"
+        BUTTONS "OK"
+END
+
+ALERT ID ClickMeAlert
+INFORMATION
+BEGIN
+        TITLE "Hey!"
+        MESSAGE "You clicked me!"
+        BUTTONS "Sure did."
+END
+
+STRING info_AA "Advanced Armaments\nNo information - Apparently machined from bar stock aluminum, lowers are marked as M-15"
+
+STRING info_ASA "American Spirit Arms\n(Formerly \"Sun Valley Traders\")\nALL lowers are Post-Ban. Began introduction of lowers and rifles in mid/late 1998. Noted as having good fit & finish. Also, reported to be manufactured by Lewis Machine & Tool"
+
+STRING info_AE "Armalite/Eagle\n(800-336-0184)\nSlightly over S/N 30,000 was the Pre-Ban cut-off, call to verify.* (Some Eagle lowers below the 30,000 range were determined to be POST ban by BATF - call to verify) Armalite sells Eagle lowers, but sells factory complete rifles with Armalite lowers."
+
+STRING info_Bohica "Bohica\nMade stainless steel lowers, rumored to have also made AR-15 pistols. Lower marked M16-SA. This is NOT verifiable info as it came from the Internet. Out of Business. Made in Colorado, went out of business before the ban, so they should all be Pre-Ban guns."
+
+STRING info_Bush "Bushmaster\n(800-998-SWAT)\nBelow L051000 - Assembled Pre-Ban Rifles and some pre-94 lowers.**\nL051001-L063000 - Mixed Pre-Ban Assembled Rifles and Pre-Sept 94 Lowers (Call to verify)\nL063001 and Up - Post-Ban"
+
+STRING info_CA "Century Arms\nLower marked CIA. All are Post-Ban. Made with Olympic Arms Receivers under contract."
+
+STRING info_Colt "Colt\n(800-962-COLT)\nCC001616 and Below - Pre-Ban\nCH019500 and Below - Pre-Ban\nGC018500 and Below - Pre-Ban\nLH011326 and Below - Pre-Ban\nMH086020 and Below - Pre-Ban\nNL004800 and Below - Pre-Ban\nSL027246 and Below - Pre-Ban\nSP360200 and Below - Pre-Ban\n1963 SP00001-SP00023**\n1964 SP00101\n1965 SP02501\n1966 SP05600\n1967 SP08250\n1968 SP10750\n1969 SP14000-SP14653\n1970 SP15001-SP15473\n1971 SP16001\n1972 SP19401\n1973 SP24201\n1974 SP32601\n1975 SP43801\n1976 SP55301\n1977 SP67651\n1978 SP83400\nST038100 and Below - Pre-Ban\nTA10100 and Below - Pre-Ban\nBD000134 and Below - Pre-Ban (AR-15A3 Tactical Carbine - very rare model)\nMT00001 and Above - Post-Ban\nBK000001and Above - Post Ban (CAR-A3)\nCST000001 and Above - Post-Ban (Began Late 1997 Production)\nCMH000001 and Above - Post Ban\nCCH010000 and Above - Post Ban MT6700, MT6700C and MT6700CH series, 1998 production"
+
+STRING info_Dalphon "Dalphon\nAll are POST ban. Cast 356-T6 Aluminum, hardcoat anodized per mil-spec A-8625"
+
+STRING info_DPMS "DPMS\n(800-578-3767)\nBelow 10300 - Pre-Ban.\nSome or all lowers are cast. Black in color. Some lowers are Stainless Steel."
+
+STRING info_Eagle "Eagle Arms\n(309-944-6939)\nNow called ArmaLite. They will not give out a list, but will look up on an individual basis. Lower receiver serial numbers DO NOT begin with EA."
+
+STRING info_EA "Essential Arms\nAll are Pre-Ban as they went out of business in 1993. (DPMS bought them prior to the Ban) Call DPMS Lower receiver serial numbers begin with EA. Some or all lowers are cast. Light gray coloring. It is rumored that Ruger investment casted the lowers for Essential Arms."
+
+STRING info_FA "Frankford Arsenal\nAll are pre-ban. As rumor has it, Olympic Arms produced the lowers for Frankford Arsenal Call Olympic Arms and then Frankford assembled the weapon. A2 configuration lower. Frankford Arsenal went out of business in 1987. (Info from RudolphoS@aol.com)"
+
+STRING info_HA "Hesse Arms\nAll AR-15’s are post ban. Manufacturing began late 1997/early 1998."
+
+STRING info_JLM "J.L.M & Sons*\n(603-425-1860)\nSC001 thru SC250 are Pre-Ban. All others are post ban."
+
+STRING info_KAC "Knights Armament Co.\nAll AR-15's are post ban, very few AR-10's are pre-ban. No further info at this time."
+
+STRING info_MM "Military Manufacturing (M2)\n(FAX 702-263-7875)\nAll were military/law enforcement only. Full auto lowers were standard, semi were optional. Lowers were machined form raw bar stock with improvements incorporated - 18deg magazine angle and square mag release. (See: http://www.m2corp.com/HOME.htm)"
+
+STRING info_Nesard "Nesard\nSee \"Sendra\" below."
+
+STRING info_OA "Olympic Arms\n(800-228-3471)\n" \
+"On June 7, 2000 the Olympic Arms Sales office was destroyed by a fire. " \
+"Luckily the manufacturing plant was saved, but all of the records were " \
+"destroyed in the fire. They do know the range of dates when lower receivers " \
+"were manufactured, although this doesn't prove that it was assembled into a "  \
+"rifle before the 09/14/1994 ban date. Here is a quote from www.olyarms.com:\n\n" \
+"\"We CANNOT provide you with the date the serial number was shipped, we CANNOT provide you with information determining whether a particular serial number was a factory assembled weapon, and most importantly, we CANNOT determine whether or not your particular serial number is a legal grandfathered pre-ban assault weapon.\"\n\n" \
+"Below are the serial number ranges and the ending date that Olympic provides " \
+"on their website. The range was manufactured on or before the date in column " \
+"two.\n\n" \
+"SN Range       End Date\n" \
+"    0001-0004      03/14/79\n" \
+"    1000-8845      06/04/82\n" \
+"   X1001-X2987     06/01/1983\n" \
+"   X2988-X3484     09/01/1983\n" \
+"   X2988-X3484     09/01/1983\n" \
+"  P0001A-P0588A    07/18/1988\n" \
+"   Z0001-Z2002     08/24/1984\n" \
+"   Z2003-Z3955     02/08/1985\n" \
+"   Z3956-Z6007     12/12/1985\n" \
+"   Z6008-Z8018     09/10/1986\n" \
+"   Z8019-Z9985     03/09/1988\n" \
+"   Z9986-Z9999     03/09/1988\n" \
+"   W1001-W2957     05/08/1989\n" \
+"   V0001-V0716     10/01/1987\n" \
+"   NAMV1-NAMV100   08/28/1986\n" \
+"   USMC1-USMC320   04/05/1993\n" \
+"   U1001-U1597     11/28/1989\n" \
+"   F1006-F3000     08/25/1989\n" \
+"   F3001-F5052     12/14/1989\n" \
+"   F5053-F9109     08/10/1990\n" \
+"   F9110-F9999     10/03/1990\n" \
+"   T1001-T2119     01/08/1991\n" \
+"   T2120-T3758     04/05/1991\n" \
+"   T3759-T7480     01/31/1992\n" \
+"   T7481-T9532     08/12/1992\n" \
+"   T9533-T9999     09/24/1992\n" \
+"   AA001           09/24/1992\n" \
+"  AA1001-AA2297    12/23/1992\n" \
+"  AA2298-AA2425    01/04/1992\n" \
+"  GG1000-GG1009    07/05/1993\n" \
+" OA1001D-OA1039D   10/31/1991\n" \
+" OAD1040-OAD1067   10/09/1992\n" \
+" OAS1042-OAS1138   10/13/1992\n" \
+" AC10000-AC10058   02/08/1993\n" \
+"  LL0001-LL0267    01/22/1993\n" \
+"  BL1000-BL2784    05/26/1993\n" \
+"  BL2785-BL4814    12/03/1993\n" \
+"  BL4815-BL6861    02/24/1994\n" \
+"  BL6862-BL8799    06/18/1994\n" \
+"  BL8800-BL9533    07/20/1994\n" \
+"  BS0001-BS0699    08/27/1994\n" \
+"  BS0700-BS0825    08/27/1994\n" \
+"  NF0001-NF1999    05/21/1994\n" \
+"  NF2000-NF3999    08/27/1994\n" \
+"  NF4000-NF4055    08/27/1994\n" \
+"94NF1000-95NF2587  01/24/1995\n" \
+"  UK0001-UK0448    08/27/1994\n" \
+"   E1001-E2099     04/24/1997?\n" \
+"   E2100-E2290     04/24/1997?\n" \
+"  CA0001-CA0690    08/09/1994\n" \
+"TBOR1791-TBOR1991  1991\n" \
+" CIA0001-CIA3402   07/14/1997\n" \
+"   H1300-H3299     08/27/1994\n" \
+"   H3300-H3354     09/13/1994\n" \
+" 95H1112-95H3340   07/07/1995\n" \
+"   V1000-V1499     05/11/1994\n" \
+"   V1500-V2755     08/05/1994\n" \
+"   V2757-V3195     11/25/1997\n" \
+"SA961000-SA961975  09/18/1996\n" \
+"  SA1975-SA3500    01/02/1998\n" \
+"  SA3501-SA5150    06/18/1998\n" \
+"  SA5151-SA6550    09/28/1998\n" \
+"  SA6551-SA8199    05/10/1999\n" \
+"  SA8200-SA9800    10/07/1999\n" \
+"  SA9801-SA9999    10/18/1999\n" \
+" AUS1000-AUS1049   02/01/1999\n" \
+"  JJ0001-JJ1600    02/18/2000\n" \
+"  JJ1601-          CURRENT\n" \
+"  KX0001-KX1601    05/10/1999\n" \
+"  KX1700-KX2935    08/20/1999\n" \
+"  KX2936-KX4735    01/20/2000\n" \
+"  KX4736-KX5760    03/31/2000\n" \
+"  KX5761-          CURRENT\n" \
+" SGW0001-          CURRENT\n" \
+"  MX1001-          CURRENT\n"
+
+
+
+
+
+STRING info_PO "Professional Ordinance\nAll are post ban (including all of the pistols).\n"
+
+STRING info_PWA "PWA\n(360-438-3983)\n35222 and Below - Pre-Ban (Note:Some lowers are cast not forged. Out of business) Post-ban have a year prefix in the serial number. Rumored to have only sold lowers."
+
+STRING info_RMA "Rocky Mountain Arms\nProducer of AR-15 type pistols."
+
+STRING info_Sendra "Sendra\nPost-ban receivers have a circle milled into the side of the magwell. They were originally bead-blasted to a non-glare finish. All others are pre-ban. (This is unverified info…) Also, they used to be NESARD. Rumored to have been owned by Dick Drasen (currently M&A Parts) and produced lowers only out of Barrington, Illinois. No complete guns were sold (again, unverified info)."
+
+STRING info_laws "Section 921 (a) (30), Title 18 U.S.C. defines \"Semiautomatic Assault Weapon\" as:\n" \
+	"1.An of the firearms, or copies\n  or dupicates of the firearms in\n  any caliber, known as;\n" \
+	"      Norinco, Mitchell,\n      Poly Technologies,\n      Avtomat Kalashinikovs.\n" \
+	"      Action Arms\n      Israeli Military Industries\n      UZI, Galil.\n" \
+	"      Beretta Ar70 (SC-70).\n" \
+	"      Colt AR-15\n" \
+	"      Fabrique National FN/FAL,\n      FN/LAR, FNC.\n" \
+	"      SWD M-10, M-11, M-11-9,\n      M-12.\n" \
+	"      Steyr AUG.\n" \
+	"      Intratec TEC-9, TEC-DC9,\n      TEC-22.\n" \
+	"      Revolving cylinder shotguns,\n      such as (or similar to) the\n      Street Sweeper and Striker 12.\n" \
+	"2.An semiautomatic rifle that has\n  the ability to accept a\n  detachable magazine and has at\n  least 2 of the following features:\n" \
+	"      a folding or telescoping stock.\n" \
+	"      a pistol grip that protrudes\n      conspicuously beneath the\n      action of the weapon.\n" \
+	"      a bayonet mount.\n" \
+	"      a flash suppressor or a threaded\n      barrel designed to\n      accommodate a flash\n      suppressor\n" \
+	"      a grenade launcher.\n" \
+	"3.A semiautomatic pistol that has\n"\
+	"  an ability to accept a detachable\n"\
+	"  magazine and has at least 2 of\n"\
+	"  the following features:\n" \
+	"      an ammunition magazine that\n      attaches to the pistol outside\n      of the pistol grip.\n" \
+	"      a threaded barrel capable of\n      accepting a barrel extender,\n      flash suppressor, forward\n      handgrip or silencer.\n" \
+	"      a shroud that is attached to, or\n" \
+	"      partially or completely encircles\n" \
+	"      the barrel and that permits the\n" \
+	"      shooter to hold the firearm with\n" \
+	"      the non-trigger hand without\n" \
+	"      being burned.\n" \
+	"      a manufactured weight of 50\n"\
+	"      ounces or more when the pistol\n"\
+	"      is unloaded.\n" \
+	"      a semiautomatic version of an\n"\
+	"      automatic firearm.\n" \
+	"4.A semiautomatic shotgun that\n"\
+	"  has at least 2 of the following\n"\
+	"  features:\n" \
+	"      a folding or telescoping stock.\n" \
+	"      a pistol grip that protrudes\n      conspicuously beneath the\n      action of the weapon.\n" \
+	"      a fixed magazine capacity in\n      excess of 5 rounds.\n" \
+	"      an ability to accept a detachable\n      magazine.\n\n" \
+	"Edward M. Owen, Jr., Chief of the Firearms Technology Branch of the BATF, has this to say:\n" \
+	"  \"Semiautomatic pistols and rifles assembled after September 13, 1994, and possessing two or more of the features listed in [Section 921 (a) (30), Title 18 U.S.C.] are semiautomatic assault weapons as defined. The fact that the receiver may have been manufactured prior to September 13, 1994, is immaterial to classification of a weapon as a semiautomatic assault weapon. Additionally, payment or non-payment of excise tax is also immaterial to classification of a firearm as semiautomatic assault weapon.\n\n" \
+	"What he is stating is, as far as pre-ban and post-ban is concerned, the date of manufacture of the receiver has nothing to do with anything. If your SAW was built into a whole SAW, or in a complete kit form, before Sept. 13, 1994 (The Date), you are the lucky owner of a pre-ban receiver. If the gun was built after this date, or if the receiver was without all of the parts to make a SAW as of The Date, then it is post-ban.\n"
+
+

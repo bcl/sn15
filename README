@@ -1,0 +1,40 @@
+AR-15 Serial # application for PalmOS Devices
+Copyright 2001 by Brian C. Lane <bcl@brianlane.com>
+http://www.brianlane.com/
+
+This is a simple PalmOS application that contains all of the information that
+I could find on the serial number ranges for various AR-15 manufacturers
+indicating whether or not the rifle is a 'pre-ban' rifle or not.
+
+Select the manufacturer from the popup menu and all of the information that I
+have found for that manufacturer will be displayed in the main screen, if it
+is too large to fit on one screen the scroll bar will be enabled, use it or
+the up/down buttons to scroll the information.
+
+Most of this info was taken from the AR15.com serial number FAQ in 1999. As of
+this writing (04/2001) I cannot find the serial number FAQ on the AR15.com
+website. I have added recent data from Olympic Arms on their serial number
+ranges which they released after their June 7, 2000 fire.
+
+This program should work on all PalmOS devices, if you have problems with it
+please email me the details fo the device you are using and the problem(s)
+encountered.
+
+The information contained in this program is for information al purposes only
+it should not be considered the final word on anything and you should contact
+the rifle's manufacturer for a definitive answer. This information is meant
+only as a guide and has not been authorized or certified by any manufacturer.
+
+Included is the gnu 'c' source used to write this program. It is released under
+the GNU Public License v2.0 and is free to use and modify and learn from. If
+you appreciate my efforts you can send any amount of $ to my PayPal account
+at www.paypal.com, email: brian@nexuscomputing.com, last name is lane.
+
+If you are a fan of the US Constitution you might also be interested in
+visiting one of my other websites - www.libertynews.org - a Liberty and Privacy
+magazine.
+
+Thanks for using my AR15 Serial Number program,
+
+Brian Lane
+04/22/2001
